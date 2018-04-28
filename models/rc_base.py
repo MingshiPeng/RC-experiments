@@ -76,7 +76,7 @@ class RcBase(NLPBase, metaclass=abc.ABCMeta):
         # [document length] and [question length] to build the model
         # train/valid/test sample number to train and validate and test the model
         statistics = self.dataset.get_data_stream()
-        self.d_len, self.q_len, self.train_nums, self.valid_nums, self.test_num = statistics
+        self.d_len, self.q_len, self.train_nums, self.valid_nums, self.test_num, self.qd_len = statistics
         self.dataset.preprocess()
 
         # Get the word embedding and character embedding(if necessary)

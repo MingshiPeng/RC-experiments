@@ -25,6 +25,7 @@ def save_args(args):
     save all arguments.
     """
     save_obj_to_json(args.weight_path, vars(args), filename="args.json")
+    logger(vars(args))
     pprint(vars(args), indent=4)
 
 
